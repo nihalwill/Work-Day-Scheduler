@@ -52,3 +52,33 @@ $("#five-pm").text(t17);
 
 var t18 = localStorage.getItem("6PM");
 $("#six-pm").text(t18);
+
+var colorCode = $(".time-block");
+console.log("colorCode:", colorCode);
+var date = new Date();
+console.log("current date:", date);
+var hour = date.getHours();
+console.log("current hour:", hour);
+
+for (i = 0; i < colorCode.length; i++) {
+  var timeBlock = parseInt(colorCode[i].getAttribute("data-hour"));
+  console.log("timeBlock:", timeBlock);
+
+  if (hour < timeBlock) {
+    colorCode[i].classList.add("future");
+    colorCode[i].classList.remove("past");
+    colorCode[i].classList.remove("present");
+  } else if (hour > timeBlock) {
+    colorCode[i].classList.add("past");
+    colorCode[i].classList.remove("present");
+    colorCode[i].classList.remove("future");
+  } else if (hour === timeBlock) {
+    colorCode[i].classList.add("present");
+    colorCode[i].classList.remove("past");
+    colorCode[i].classList.remove("future");
+  } else {
+    colorCode[i].classList.remove("past");
+    colorCode[i].classList.remove("present");
+    colorCode[i].classList.remove("future");
+  }
+}
