@@ -48,6 +48,7 @@ textarea {
   border-top: 1px dashed #000000;
   text-align: center;
   align-content: center;
+  line-height: 5;
 }
 
 .past {

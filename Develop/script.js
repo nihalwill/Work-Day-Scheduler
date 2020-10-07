@@ -9,7 +9,7 @@ $(document).ready(function () {
   setInterval(updateTime, 1000);
 });
 
-$(".saveBtn").on("click", function () {
+$(".saveBtn").on("click", function (event) {
   event.preventDefault();
   console.log("test of save button");
 
