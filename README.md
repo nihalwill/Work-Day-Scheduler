@@ -21,3 +21,4 @@ Changes some CSS for visual aesthetics
 Everything working properly outside of time blocks and current hour
 Changed some CSS with hour display of texts
 Added new screenshot of finished page
+![](Assets/Scheduler.png)
